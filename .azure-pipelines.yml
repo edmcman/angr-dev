@@ -27,9 +27,6 @@ jobs:
           # macos ships an older version of bash than is supported in setup.sh
           - script: brew install bash
             displayName: Upgrade bash
-          # macos fails if unicorn isn't preinstalled, unsure why
-          - script: pip install --pre unicorn
-            displayName: Install unicorn
 
         # Windows setup
         - ${{ if contains(pool, 'windows') }}:
