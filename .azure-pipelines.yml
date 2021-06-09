@@ -22,6 +22,7 @@ jobs:
           inputs:
             versionSpec: ${{ python_version }}
           displayName: Use python version ${{ python_version }}
+        - script: pip install -U pip wheel
 
         - ${{ if contains(pool, 'macos') }}:
           # macos ships an older version of bash than is supported in setup.sh
